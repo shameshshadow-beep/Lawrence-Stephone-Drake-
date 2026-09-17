@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    background: #000;
+    border-bottom: 2px solid #ff7a00;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0 0 15px;
+    color: #ff7a00;
+    text-align: center;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff7a00;
+}
+
+section {
+    padding: 70px 0;
+}
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background:
+        radial-gradient(circle at center, #301500 0%, #0b0704 45%, #000 100%);
+}
+
+.hero h2 {
+    color: #ff7a00;
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    line-height: 1.1;
+    max-width: 900px;
+    margin: 0 0 30px;
+}
+
+.cta,
+.subscribe,
+button.donate {
+    display: inline-block;
+    background: #ff7a00;
+    color: #000;
+    border: 2px solid #ff7a00;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cta:hover,
+.subscribe:hover,
+button.donate:hover {
+    background: #000;
+    color: #ff7a00;
+}
+
+h2 {
+    color: #ff7a00;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+#blog,
+#library,
+#about {
+    background: #0b0b0b;
+}
+
+#chocolateway,
+#magazine,
+#donate {
+    background: #050505;
+}
+
+.blog-post {
+    background: #111;
+    border-left: 4px solid #ff7a00;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.blog-post a {
+    color: #ff7a00;
+}
+
+.video-gallery,
+.literature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.video-gallery > div,
+.literature-list > div {
+    background: #111;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#about p {
+    max-width: 900px;
+}
+
+#customAmount,
+#newsletter {
+    padding: 12px;
+    border: 1px solid #555;
+    background: #111;
+    color: #fff;
+    border-radius: 4px;
+}
+
+footer {
+    background: #000;
+    border-top: 2px solid #ff7a00;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #ff7a00;
+    margin: 0 8px;
+}
+
+#newsletterForm {
+    margin-top: 25px;
+}
+
+#newsletterForm button {
+    padding: 12px 18px;
+    background: #ff7a00;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    header {
+        position: relative;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta {
+        display: block;
+        width: 90%;
+        max-width: 300
