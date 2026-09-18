@@ -222,55 +222,103 @@ footer a {
         max-width: 300
 
 
-/* ===== CHOCOLATEWAY GALAXY — DEEP SPACE BACKGROUND ===== */
+/* ===== CHOCOLATEWAY GALAXY — VISIBLE SPACE LAYER ===== */
 
+/* Keep the page itself transparent */
+html,
 body {
-    background-color: #010105;
-    background-image:
-        /* bright stars */
-        radial-gradient(circle at 10% 15%, #ffffff 0 2px, transparent 3px),
-        radial-gradient(circle at 25% 35%, #ffffff 0 1.5px, transparent 2.5px),
-        radial-gradient(circle at 45% 12%, #ffb347 0 2px, transparent 3px),
-        radial-gradient(circle at 65% 28%, #ffffff 0 2px, transparent 3px),
-        radial-gradient(circle at 82% 8%, #ffffff 0 1.5px, transparent 2.5px),
-        radial-gradient(circle at 92% 45%, #ff7a00 0 2px, transparent 3px),
-        radial-gradient(circle at 72% 68%, #ffffff 0 1.5px, transparent 2.5px),
-        radial-gradient(circle at 35% 78%, #ffffff 0 2px, transparent 3px),
-        radial-gradient(circle at 12% 88%, #ff9d2e 0 1.5px, transparent 2.5px),
+    background: #000 !important;
+    min-height: 100%;
+}
 
-        /* orange planet */
-        radial-gradient(circle at 84% 24%,
-            #ffd08a 0 7px,
-            #ff8a18 8px 24px,
-            #a83a00 25px 39px,
-            #401000 40px 44px,
-            transparent 45px),
+/* Galaxy layer */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
 
-        /* blue-purple planet */
-        radial-gradient(circle at 10% 67%,
-            #b9c8ff 0 8px,
-            #536dff 9px 27px,
-            #33256f 28px 43px,
-            #100b29 44px 49px,
-            transparent 50px),
+    background:
+        /* LARGE ORANGE PLANET */
+        radial-gradient(circle at 86% 22%,
+            #ffe0a3 0 8px,
+            #ff9d2e 9px 30px,
+            #d34a00 31px 52px,
+            #6b1b00 53px 65px,
+            transparent 67px),
 
-        /* orange nebula */
-        radial-gradient(ellipse at 70% 50%,
-            rgba(255, 94, 0, 0.20),
-            transparent 35%),
+        /* LARGE BLUE/PURPLE PLANET */
+        radial-gradient(circle at 8% 72%,
+            #d5dcff 0 7px,
+            #687cff 8px 32px,
+            #37267d 33px 57px,
+            #17102f 58px 69px,
+            transparent 71px),
 
-        /* purple nebula */
-        radial-gradient(ellipse at 20% 40%,
-            rgba(89, 55, 180, 0.22),
+        /* BRIGHT STARS */
+        radial-gradient(circle at 10% 10%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 20% 30%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 35% 15%, #ffb45c 0 2px, transparent 3px),
+        radial-gradient(circle at 48% 38%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 62% 12%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 74% 46%, #ff8a18 0 2px, transparent 3px),
+        radial-gradient(circle at 92% 58%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 55% 72%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 30% 88%, #ffb45c 0 2px, transparent 3px),
+        radial-gradient(circle at 78% 90%, white 0 2px, transparent 3px),
+
+        /* NEBULA GLOWS */
+        radial-gradient(ellipse at 65% 55%,
+            rgba(255, 91, 0, 0.32) 0%,
             transparent 38%),
 
+        radial-gradient(ellipse at 25% 45%,
+            rgba(93, 67, 220, 0.30) 0%,
+            transparent 40%),
+
+        /* DEEP SPACE */
         linear-gradient(
             180deg,
-            #010105 0%,
-            #080513 40%,
-            #020208 70%,
+            #020108 0%,
+            #09051a 45%,
+            #03010b 72%,
             #000000 100%
         );
 
-    background-size:
-        190px 190
+    background-size: cover;
+}
+
+/* Put ALL website content above the galaxy */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Allow the space layer to show through */
+main,
+section,
+.hero {
+    background-color: transparent !important;
+}
+
+/* Dark glass behind sections so words remain readable */
+section {
+    background: rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Header remains readable */
+header {
+    background: rgba(0, 0, 0, 0.72) !important;
+}
+
+/* Hero gets subtle dark glass instead of solid black */
+.hero {
+    background: rgba(0, 0, 0, 0.20) !important;
+}
+
+/* Cards remain readable */
+.blog-post {
+    background: rgba(0, 0, 0, 0.68) !important;
+    border: 1px solid rgba(255, 122, 0, 0.35);
+}
