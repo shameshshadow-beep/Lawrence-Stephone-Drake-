@@ -1,3 +1,8 @@
+/* ==================================================
+   LAWRENCE STEPHONE DRAKE — NUBAMAEVERSE
+   CHOCOLATEWAY GALAXY
+   ================================================== */
+
 * {
     box-sizing: border-box;
 }
@@ -6,318 +11,256 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
 body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background: transparent;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
     color: #f5f5f5;
     line-height: 1.6;
+    overflow-x: hidden;
+
+    /* DEEP-SPACE BACKGROUND */
+    background:
+        /* ORANGE PLANET */
+        radial-gradient(
+            circle at 88% 18%,
+            #fff0c7 0 8px,
+            #ffbf5e 9px 20px,
+            #ff7a00 21px 45px,
+            #b83d00 46px 65px,
+            #501500 66px 76px,
+            transparent 78px
+        ),
+
+        /* BLUE/PURPLE PLANET */
+        radial-gradient(
+            circle at 9% 67%,
+            #e4e8ff 0 7px,
+            #8794ff 8px 25px,
+            #5363e8 26px 48px,
+            #34266f 49px 67px,
+            #140d2d 68px 77px,
+            transparent 79px
+        ),
+
+        /* STARS */
+        radial-gradient(circle at 7% 10%, #fff 0 2px, transparent 3px),
+        radial-gradient(circle at 16% 26%, #fff 0 1px, transparent 2px),
+        radial-gradient(circle at 27% 8%, #ffb65c 0 2px, transparent 3px),
+        radial-gradient(circle at 38% 34%, #fff 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 49% 13%, #fff 0 2px, transparent 3px),
+        radial-gradient(circle at 61% 29%, #ff8a18 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 73% 8%, #fff 0 2px, transparent 3px),
+        radial-gradient(circle at 82% 42%, #fff 0 1px, transparent 2px),
+        radial-gradient(circle at 94% 58%, #ffb65c 0 2px, transparent 3px),
+        radial-gradient(circle at 67% 72%, #fff 0 2px, transparent 3px),
+        radial-gradient(circle at 42% 81%, #fff 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 21% 91%, #ff8a18 0 2px, transparent 3px),
+
+        /* NEBULAS */
+        radial-gradient(
+            ellipse at 72% 53%,
+            rgba(255, 94, 0, 0.25) 0%,
+            transparent 38%
+        ),
+
+        radial-gradient(
+            ellipse at 20% 43%,
+            rgba(91, 65, 210, 0.30) 0%,
+            transparent 42%
+        ),
+
+        /* SPACE */
+        linear-gradient(
+            180deg,
+            #010106 0%,
+            #080415 38%,
+            #050211 65%,
+            #010104 100%
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: rgba(0, 0, 0, 0.78);
+    border-bottom: 1px solid rgba(255, 122, 0, 0.45);
+    backdrop-filter: blur(8px);
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px;
+    width: min(1100px, 88%);
     margin: 0 auto;
-}
-
-header {
-    background: #000;
-    border-bottom: 2px solid #ff7a00;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 header .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 82px;
 }
 
 header h1 {
-    margin: 0 0 15px;
+    margin: 0;
     color: #ff7a00;
-    text-align: center;
-    font-size: 2rem;
+    font-size: 1.45rem;
+    white-space: nowrap;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: flex-end;
+    gap: 8px 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 0.92rem;
 }
 
 nav a:hover {
-    color: #ff7a00;
+    color: #ff8a18;
 }
 
-section {
-    padding: 70px 0;
-}
+
+/* ================= HERO ================= */
 
 .hero {
-    min-height: 70vh;
+    min-height: 78vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 60px 20px;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.hero .container {
+    max-width: 850px;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    color: #ff9d2e;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.22em;
 }
 
 .hero h2 {
+    margin: 15px 0;
     color: #ff7a00;
-    font-size: clamp(2.2rem, 7vw, 4.5rem);
-    line-height: 1.1;
-    max-width: 900px;
-    margin: 0 0 30px;
+    font-size: clamp(2.2rem, 7vw, 4.8rem);
+    line-height: 1.05;
+    text-shadow:
+        0 0 12px rgba(255, 122, 0, 0.45),
+        0 0 30px rgba(255, 90, 0, 0.18);
 }
+
+.hero-text {
+    max-width: 650px;
+    margin: 20px auto 32px;
+    font-size: 1.08rem;
+    color: #dddddd;
+}
+
+
+/* ================= BUTTONS ================= */
 
 .cta,
 .subscribe,
-button.donate {
+.donate {
     display: inline-block;
-    background: #ff7a00;
-    color: #000;
-    border: 2px solid #ff7a00;
-    padding: 12px 22px;
-    margin: 8px;
+    padding: 14px 25px;
+    border: 1px solid #ff8a18;
     border-radius: 4px;
-    text-decoration: none;
+    background: #ff7a00;
+    color: #090400;
     font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
+    box-shadow: 0 0 22px rgba(255, 122, 0, 0.25);
 }
 
 .cta:hover,
 .subscribe:hover,
-button.donate:hover {
-    background: #000;
-    color: #ff7a00;
+.donate:hover {
+    background: #ffffff;
+    color: #111111;
 }
 
-h2 {
-    color: #ff7a00;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
 
-#blog,
-#library,
-#about {
-    background: transparent;
-}
+/* ================= SECTIONS ================= */
 
-#chocolateway,
-#magazine,
-#donate {
-    background: transparent;
-}
-
-.blog-post {
-    background: #111;
-    border-left: 4px solid #ff7a00;
-    padding: 25px;
-    margin: 25px 0;
-}
-
-.blog-post a {
-    color: #ff7a00;
-}
-
-.video-gallery,
-.literature-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.video-gallery > div,
-.literature-list > div {
-    background: #111;
-    border: 1px solid #333;
-    padding: 20px;
-    border-radius: 6px;
-}
-
-#about p {
-    max-width: 900px;
-}
-
-#customAmount,
-#newsletter {
-    padding: 12px;
-    border: 1px solid #555;
-    background: #111;
-    color: #fff;
-    border-radius: 4px;
-}
-
-footer {
-    background: #000;
-    border-top: 2px solid #ff7a00;
-    padding: 40px 0;
+section {
+    padding: 80px 0;
     text-align: center;
 }
 
-footer a {
+section:nth-of-type(even) {
+    background: rgba(0, 0, 0, 0.28);
+}
+
+section:nth-of-type(odd):not(.hero) {
+    background: rgba(9, 4, 20, 0.28);
+}
+
+section h2 {
+    margin-top: 0;
     color: #ff7a00;
-    margin: 0 8px;
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
 }
 
-#newsletterForm {
-    margin-top: 25px;
+section p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#newsletterForm button {
-    padding: 12px 18px;
-    background: #ff7a00;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-}
 
-@media (max-width: 700px) {
-    header {
-        position: relative;
-    }
+/* ================= CONTENT CARDS ================= */
 
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    nav ul {
-        gap: 10px;
-        font-size: 0.9rem;
-    }
-
-    section {
-        padding: 50px 0;
-    }
-
-    .hero {
-        min-height: 60vh;
-    }
-
-    .hero h2 {
-        font-size: 2.5rem;
-    }
-
-    .cta {
-        display: block;
-        width: 90%;
-        max-width: 300
-
-
-/* ===== CHOCOLATEWAY GALAXY — VISIBLE SPACE LAYER ===== */
-
-/* Keep the page itself transparent */
-html,
-body {
-    background: transparent;;
-    min-height: 100%;
-}
-
-/* Galaxy layer */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    background:
-        /* LARGE ORANGE PLANET */
-        radial-gradient(circle at 86% 22%,
-            #ffe0a3 0 8px,
-            #ff9d2e 9px 30px,
-            #d34a00 31px 52px,
-            #6b1b00 53px 65px,
-            transparent 67px),
-
-        /* LARGE BLUE/PURPLE PLANET */
-        radial-gradient(circle at 8% 72%,
-            #d5dcff 0 7px,
-            #687cff 8px 32px,
-            #37267d 33px 57px,
-            #17102f 58px 69px,
-            transparent 71px),
-
-        /* BRIGHT STARS */
-        radial-gradient(circle at 10% 10%, white 0 2px, transparent 3px),
-        radial-gradient(circle at 20% 30%, white 0 2px, transparent 3px),
-        radial-gradient(circle at 35% 15%, #ffb45c 0 2px, transparent 3px),
-        radial-gradient(circle at 48% 38%, white 0 2px, transparent 3px),
-        radial-gradient(circle at 62% 12%, white 0 2px, transparent 3px),
-        radial-gradient(circle at 74% 46%, #ff8a18 0 2px, transparent 3px),
-        radial-gradient(circle at 92% 58%, white 0 2px, transparent 3px),
-        radial-gradient(circle at 55% 72%, white 0 2px, transparent 3px),
-        radial-gradient(circle at 30% 88%, #ffb45c 0 2px, transparent 3px),
-        radial-gradient(circle at 78% 90%, white 0 2px, transparent 3px),
-
-        /* NEBULA GLOWS */
-        radial-gradient(ellipse at 65% 55%,
-            rgba(255, 91, 0, 0.32) 0%,
-            transparent 38%),
-
-        radial-gradient(ellipse at 25% 45%,
-            rgba(93, 67, 220, 0.30) 0%,
-            transparent 40%),
-
-        /* DEEP SPACE */
-        linear-gradient(
-            180deg,
-            #020108 0%,
-            #09051a 45%,
-            #03010b 72%,
-            #000000 100%
-        );
-
-    background-size: cover;
-}
-
-/* Put ALL website content above the galaxy */
-body > * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Allow the space layer to show through */
-main,
-section,
-.hero {
-    background-color: transparent !important;
-}
-
-/* Dark glass behind sections so words remain readable */
-section {
-    background: rgba(0, 0, 0, 0.28) !important;
-}
-
-/* Header remains readable */
-header {
-    background: rgba(0, 0, 0, 0.72) !important;
-}
-
-/* Hero gets subtle dark glass instead of solid black */
-.hero {
-    background: rgba(0, 0, 0, 0.20) !important;
-}
-
-/* Cards remain readable */
-.blog-post {
-    background: rgba(0, 0, 0, 0.68) !important;
+.blog-post,
+.feature-card,
+.literature-list > div {
+    max-width: 760px;
+    margin: 35px auto 0;
+    padding: 30px;
     border: 1px solid rgba(255, 122, 0, 0.35);
+    border-radius: 8px;
+
+    background: rgba(0, 0, 0, 0.68);
+
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(255, 100, 0, 0.06);
+
+    backdrop-filter: blur(5px);
 }
+
+.blog-post h3,
+.feature-card h3,
+.literature-list h3 {
+    color: #ff9d2e;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 35px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.88);
+    border-top: 1px solid rgba(255, 122, 0, 0
