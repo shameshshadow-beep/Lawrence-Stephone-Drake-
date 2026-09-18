@@ -226,7 +226,7 @@ footer a {
 /* Keep the page itself transparent */
 html,
 body {
-    background: #000 !important;
+    background: transparent;;
     min-height: 100%;
 }
 
@@ -235,7 +235,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
 
     background:
