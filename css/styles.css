@@ -222,36 +222,55 @@ footer a {
         max-width: 300
 
 
-    /* ===== CHOCOLATEWAY GALAXY SPACE BACKGROUND ===== */
+/* ===== CHOCOLATEWAY GALAXY — DEEP SPACE BACKGROUND ===== */
 
 body {
-    background-color: #020204;
+    background-color: #010105;
     background-image:
-        radial-gradient(circle at 15% 20%, rgba(255, 120, 0, 0.18) 0 2px, transparent 3px),
-        radial-gradient(circle at 75% 15%, rgba(255, 255, 255, 0.85) 0 1px, transparent 2px),
-        radial-gradient(circle at 35% 65%, rgba(255, 255, 255, 0.65) 0 1px, transparent 2px),
-        radial-gradient(circle at 85% 75%, rgba(255, 120, 0, 0.25) 0 2px, transparent 3px),
-        radial-gradient(circle at 55% 40%, rgba(255, 255, 255, 0.45) 0 1px, transparent 2px),
-        linear-gradient(180deg, #020204 0%, #090510 45%, #020204 100%);
+        /* bright stars */
+        radial-gradient(circle at 10% 15%, #ffffff 0 2px, transparent 3px),
+        radial-gradient(circle at 25% 35%, #ffffff 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 45% 12%, #ffb347 0 2px, transparent 3px),
+        radial-gradient(circle at 65% 28%, #ffffff 0 2px, transparent 3px),
+        radial-gradient(circle at 82% 8%, #ffffff 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 92% 45%, #ff7a00 0 2px, transparent 3px),
+        radial-gradient(circle at 72% 68%, #ffffff 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 35% 78%, #ffffff 0 2px, transparent 3px),
+        radial-gradient(circle at 12% 88%, #ff9d2e 0 1.5px, transparent 2.5px),
+
+        /* orange planet */
+        radial-gradient(circle at 84% 24%,
+            #ffd08a 0 7px,
+            #ff8a18 8px 24px,
+            #a83a00 25px 39px,
+            #401000 40px 44px,
+            transparent 45px),
+
+        /* blue-purple planet */
+        radial-gradient(circle at 10% 67%,
+            #b9c8ff 0 8px,
+            #536dff 9px 27px,
+            #33256f 28px 43px,
+            #100b29 44px 49px,
+            transparent 50px),
+
+        /* orange nebula */
+        radial-gradient(ellipse at 70% 50%,
+            rgba(255, 94, 0, 0.20),
+            transparent 35%),
+
+        /* purple nebula */
+        radial-gradient(ellipse at 20% 40%,
+            rgba(89, 55, 180, 0.22),
+            transparent 38%),
+
+        linear-gradient(
+            180deg,
+            #010105 0%,
+            #080513 40%,
+            #020208 70%,
+            #000000 100%
+        );
+
     background-size:
-        230px 230px,
-        170px 170px,
-        130px 130px,
-        310px 310px,
-        190px 190px,
-        100% 100%;
-    background-attachment: fixed;
-}
-
-/* Let the galaxy show through the page sections */
-section {
-    background-color: rgba(0, 0, 0, 0.68);
-}
-
-/* Slight cosmic glow behind the hero */
-.hero {
-    background:
-        radial-gradient(circle at center,
-        rgba(255, 102, 0, 0.12),
-        rgba(0, 0, 0, 0.72) 65%);
-        }
+        190px 190
