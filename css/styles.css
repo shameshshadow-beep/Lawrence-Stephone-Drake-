@@ -10,7 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background: #050505;
+    background: transparent;
     color: #f5f5f5;
     line-height: 1.6;
 }
@@ -75,8 +75,7 @@ section {
     justify-content: center;
     text-align: center;
     padding: 60px 20px;
-    background:
-        radial-gradient(circle at center, #301500 0%, #0b0704 45%, #000 100%);
+    background: transparent;
 }
 
 .hero h2 {
@@ -118,13 +117,13 @@ h2 {
 #blog,
 #library,
 #about {
-    background: #0b0b0b;
+    background: transparent;
 }
 
 #chocolateway,
 #magazine,
 #donate {
-    background: #050505;
+    background: transparent;
 }
 
 .blog-post {
